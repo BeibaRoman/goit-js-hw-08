@@ -41,7 +41,8 @@ function onFormInput(e) {
 function updateInputValues() {
   const saveStorageValue = load(STORAGE_KEY);
   if (saveStorageValue) {
-    const formVlues = Object.entries(saveStorageValue).forEach(value => {
+    const formValues = Object.entries(saveStorageValue);
+    formValues.forEach(value => {
       const inputEl = document.querySelector(`[name=${value[0]}]`);
       inputEl.value = value[1];
     });
